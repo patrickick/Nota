@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Revisao.Models.Aluno>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.RM)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaNAC)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaAM)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaPS)</th>
+        <th>@Html.DisplayNameFor(m => m.Media)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.RM)</td>
+            <td>@Html.DisplayFor(m => item.NotaNAC)</td>
+            <td>@Html.DisplayFor(m => item.NotaAM)</td>
+            <td>@Html.DisplayFor(m => item.NotaPS)</td>
+            <td>@Html.DisplayFor(m => item.Media)</td>
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("Voltar ao menu", "Index")
