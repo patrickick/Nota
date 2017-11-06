@@ -1,0 +1,57 @@
+﻿@model Revisao.Models.Aluno
+@{
+    ViewBag.Title = "Incluir";
+}
+
+<h2>Incluir</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.RM)</td>
+            <td>@Html.TextBoxFor(m => m.RM)</td>
+            <td>@Html.ValidationMessageFor(m => m.RM)</td>
+        </tr>
+        <tr>    
+            <td>@Html.DisplayNameFor(m => m.Materia)</td>
+            <td>@Html.TextBoxFor(m => m.Materia)</td>
+            <td>@Html.ValidationMessageFor(m => m.Materia)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.NotaNAC1)</td>
+            <td>@Html.TextBoxFor(m => m.NotaNAC1)</td>
+            <td>@Html.ValidationMessageFor(m => m.NotaNAC1)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.NotaAM1)</td>
+            <td>@Html.TextBoxFor(m => m.NotaAM1)</td>
+            <td>@Html.ValidationMessageFor(m => m.NotaAM1)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.NotaPS1)</td>
+            <td>@Html.TextBoxFor(m => m.NotaPS1)</td>
+            <td>@Html.ValidationMessageFor(m => m.NotaPS1)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.NotaNAC2)</td>
+            <td>@Html.TextBoxFor(m => m.NotaNAC2)</td>
+            <td>@Html.ValidationMessageFor(m => m.NotaNAC2)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.NotaAM2)</td>
+            <td>@Html.TextBoxFor(m => m.NotaAM2)</td>
+            <td>@Html.ValidationMessageFor(m => m.NotaAM2)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.NotaPS2)</td>
+            <td>@Html.TextBoxFor(m => m.NotaPS2)</td>
+            <td>@Html.ValidationMessageFor(m => m.NotaPS2)</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Salvar" /></td>
+        </tr>
+    </table>
+
+    @Html.ActionLink("Voltar ao menu", "Index")
+}

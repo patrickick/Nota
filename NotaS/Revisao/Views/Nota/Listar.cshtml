@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Revisao.Models.Aluno>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.RM)</th>
+        <th>@Html.DisplayNameFor(m => m.Materia)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaNAC1)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaAM1)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaPS1)</th>
+        <th>@Html.DisplayNameFor(m => m.Media1)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaNAC2)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaAM2)</th>
+        <th>@Html.DisplayNameFor(m => m.NotaPS2)</th>
+        <th>@Html.DisplayNameFor(m => m.Media2)</th>
+        <th>@Html.DisplayNameFor(m => m.MediaFinal)</th>
+        <th>@Html.DisplayNameFor(m => m.Resultado)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.RM)</td>
+            <td>@Html.DisplayFor(m => item.Materia)</td>
+            <td>@Html.DisplayFor(m => item.NotaNAC1)</td>
+            <td>@Html.DisplayFor(m => item.NotaAM1)</td>
+            <td>@Html.DisplayFor(m => item.NotaPS1)</td>
+            <td>@Html.DisplayFor(m => item.Media1)</td>
+            <th>@Html.DisplayFor(m => item.NotaNAC2)</th>
+            <th>@Html.DisplayFor(m => item.NotaAM2)</th>
+            <th>@Html.DisplayFor(m => item.NotaPS2)</th>
+            <th>@Html.DisplayFor(m => item.Media2)</th>
+            <th>@Html.DisplayFor(m => item.MediaFinal)</th>
+            <th>@Html.DisplayFor(m => item.Resultado)</th>
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("Voltar ao menu", "Index")
